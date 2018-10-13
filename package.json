@@ -1,0 +1,19 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch src/style.scss src/style.css",
+    "serve": "browser-sync start --server \"src/\"  --files \"src/*\" \"src/css/*\""
+  },
+  "keywords": [
+    "node.",
+    "npm"
+  ],
+  "author": "Alan",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.3"
+  }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Node</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <a class="home">Home</a>
+        <a class="contato">Contato</a>
+        <a class="quem-somos">Quem Somos</a>
+    </nav>
+
+    <section id="view"></section>
+
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous">
+        </script>
+    <script>
+        $(".home").click(function () {
+            nav('home/home.html');
+        });
+
+        $(".contato").click(function () {
+            nav('contato/contato.html');
+        });
+
+        $(".quem-somos").click(function () {
+           nav('quem-somos/quem-somos.html');
+        });
+
+        function nav(url){
+            $.get(url, function (resposta) {
+                $("#view").html(resposta);
+            });
+        }
+    </script>
+
+</body>
+
+</html>
